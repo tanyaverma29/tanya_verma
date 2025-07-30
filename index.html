@@ -1,0 +1,205 @@
+HTML Code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tanya Verma - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101820;
+      --fg: #f4f8fb;
+      --accent: #31cafb;
+      --card-bg: #182535;
+      --border: #253342;
+      --radius: 18px;
+      --transition: 0.25s cubic-bezier(.8,.4,.3,1);
+    }
+    html, body {
+      margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    body {
+      min-height: 100vh; line-height: 1.62;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 2rem 1rem;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px #0d1a2f44;
+    }
+    .profile {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .profile-img {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    .profile-img:hover { transform: scale(1.05);}
+    .profile-info h1 {
+      margin: 0 0 0.5em 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+    .socials {
+      display: flex; gap: 1.2em; margin-top: 0.8em;
+    }
+    .socials a {
+      color: var(--accent);
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .socials a:hover { color: #fff; }
+    section {
+      margin-top: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.35rem;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      margin-bottom: 0.8em;
+      margin-top: 0.2em;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.6em;
+    }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3em 1em;
+      box-shadow: 0 2px 8px #26324811;
+      transition: transform var(--transition), box-shadow var(--transition);
+      will-change: transform;
+      min-height: 110px;
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-7px) scale(1.02);
+      box-shadow: 0 8px 24px #31cafa55;
+      border-color: var(--accent);
+    }
+    .card-title {
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin-bottom: 0.4em;
+      letter-spacing: 0.3px;
+      color: #fff;
+    }
+    .card .card-link {
+      margin-top: 1em;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color var(--transition);
+      align-self: flex-start;
+    }
+    .card .card-link:hover { text-decoration: underline; color: #fff;}
+    .skills-list {
+      display: flex; flex-wrap: wrap; gap: 1em;
+      list-style: none; padding: 0; margin: 0;
+    }
+    .skill {
+      background: var(--border);
+      color: var(--accent);
+      padding: 0.4em 1em;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      margin-bottom: 0.5em;
+      transition: background var(--transition), color var(--transition);
+    }
+    .skill:hover {
+      background: var(--accent);
+      color: #182535;
+    }
+    .contact-box {
+      background: #22304b;
+      border-radius: var(--radius);
+      padding: 1em 1.2em;
+      margin-top: 1em;
+      font-size: 1.18em;
+      color: #fff;
+    }
+    a, a:visited { color: var(--accent);}
+    @media (max-width: 700px) {
+      .container { padding: 1.1em;}
+      .profile { flex-direction: column; gap: 1em;}
+      .profile-img { width: 88px; height: 88px;}
+    }
+    @media (max-width: 520px) {
+      h1 { font-size: 2rem;}
+      .cards { grid-template-columns: 1fr;}
+      .skills-list { gap: 0.7em; font-size: 0.97em;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="https://avatars.githubusercontent.com/u/tanyaverma29" alt="Tanya Verma" class="profile-img" />
+      <div class="profile-info">
+        <h1>Your Name</h1>
+        <p>Short introduction about yourself (e.g., Web Developer & AI Enthusiast, passionate about building scalable, accessible web apps.)</p>
+        <div class="socials">
+          <a href="https://github.com/tanyaverma29" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+          <a href="mailto:your@email.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <section>
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="card-title">Project One</span>
+          <p>Brief description of your project and technologies used.</p>
+          <a class="card-link" href="https://github.com/yourusername/project1" target="_blank">[Code]</a>
+        </div>
+        <div class="card">
+          <span class="card-title">Project Two</span>
+          <p>Short summary of what makes it unique or your role.</p>
+          <a class="card-link" href="https://github.com/yourusername/project2" target="_blank">[Code]</a>
+        </div>
+        <!-- Add more cards for projects as needed -->
+      </div>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li class="skill">JavaScript</li>
+        <li class="skill">React</li>
+        <li class="skill">TailwindCSS</li>
+        <li class="skill">Python</li>
+        <li class="skill">AI & ML</li>
+        <li class="skill">Azure</li>
+        <li class="skill">Power BI</li>
+        <!-- Add more skills -->
+      </ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-box">
+        Prefer email? <a href="mailto:your@email.com">Email me</a> — or reach out through <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>.
+      </div>
+    </section>
+  </div>
+</body>
+</html>
